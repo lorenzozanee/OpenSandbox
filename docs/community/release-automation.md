@@ -84,7 +84,11 @@ lands on the release branch through the auto-merge PR with local image
 IDs standing in for registry digests, and no git tags are minted. To
 rehearse a release in a fork, prepare the release branch (bump + notes)
 and dispatch the workflow with `dry_run=true` — the
-`UMBRELLA_PUBLISH_ENABLED` variable does not need to exist there.
+`UMBRELLA_PUBLISH_ENABLED` variable does not need to exist there. The
+fork must enable **Allow GitHub Actions to create and approve pull
+requests** (Settings → Actions → General → Workflow permissions);
+`pull-requests: write` in the workflow alone cannot override that
+setting being off.
 
 ## Release Artifacts
 
